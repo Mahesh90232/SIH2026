@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panchayat Weather Connect - hyperlocal weather intelligence for rural communities.">
+  <title>Panchayat Weather Connect | Local Weather Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow glow-one"></div>
+  <div class="bg-glow glow-two"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">☁</span>
+      <span><strong>Panchayat</strong><em>Weather Connect</em></span>
+    </a>
+    <nav>
+      <a class="active" href="#home">Home</a>
+      <a href="#forecast">Forecast</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="nav-status"><span></span> Prototype Mode</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>●</span> Hyperlocal weather intelligence</div>
+        <h1>Weather insights,<br><span>down to every Panchayat.</span></h1>
+        <p class="hero-text">A simple, accessible platform designed to help rural communities understand local weather conditions and make better day-to-day decisions.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#forecast">Explore Forecast <span>→</span></a>
+          <a class="secondary-btn" href="#about">How it works</a>
+        </div>
+        <div class="trust-row">
+          <div><b>01</b><span>District<br>selection</span></div>
+          <div><b>02</b><span>Block-level<br>view</span></div>
+          <div><b>03</b><span>Panchayat<br>forecast</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="sun-orb"></div>
+        <div class="cloud cloud-a"></div>
+        <div class="cloud cloud-b"></div>
+        <div class="forecast-float">
+          <div class="mini-label">TODAY • ANAND</div>
+          <div class="big-temp">31.8°</div>
+          <div class="condition">Partly cloudy <span>☁️</span></div>
+          <div class="mini-grid">
+            <span>💧 79%<small>Humidity</small></span>
+            <span>🌧 84%<small>Rain chance</small></span>
+            <span>💨 16 km/h<small>Wind</small></span>
+          </div>
+        </div>
+        <div class="location-pill">⌖ Anand, Gujarat <span>•</span> Panchayat level</div>
+      </div>
+    </section>
+
+    <section class="forecast-section" id="forecast">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">LOCAL FORECAST</div>
+          <h2>Find your Panchayat</h2>
+          <p>Select your location to view the prototype forecast.</p>
+        </div>
+        <div class="live-chip"><span></span> Demo data</div>
+      </div>
+
+      <div class="forecast-card">
+        <div class="selector-panel">
+          <div class="panel-title"><span class="icon-box">⌖</span><div><strong>Choose location</strong><small>Start with your administrative area</small></div></div>
+
+          <label for="district">District</label>
+          <select id="district">
+            <option value="Anand">Anand</option>
+          </select>
+
+          <label for="block">Block</label>
+          <select id="block">
+            <option value="Anand">Anand</option>
+          </select>
+
+          <label for="panchayat">Panchayat</label>
+          <select id="panchayat">
+            <option value="Panchayat A">Panchayat A</option>
+            <option value="Panchayat B">Panchayat B</option>
+            <option value="Panchayat C">Panchayat C</option>
+          </select>
+
+          <button class="forecast-btn" onclick="showWeather()">View Panchayat Forecast <span>→</span></button>
+          <p class="prototype-note">Prototype uses simulated values for demonstration.</p>
+        </div>
+
+        <div id="weather" class="weather-panel">
+          <div class="weather-top">
+            <div>
+              <span class="small-cap">CURRENT PROTOTYPE FORECAST</span>
+              <h3 id="weatherLocation">Panchayat A</h3>
+              <p>Anand • Gujarat</p>
+            </div>
+            <div class="weather-icon" id="weatherIcon">🌦️</div>
+          </div>
+
+          <div class="main-temp"><span id="temperature">31.5</span><sup>°C</sup></div>
+          <div class="advisory" id="advisory">🌧 Rain possible. Monitor weather conditions.</div>
+
+          <div class="metrics">
+            <div><span>🌧</span><b id="rainfall">22</b><small>Rainfall · mm</small></div>
+            <div><span>💧</span><b id="humidity">75</b><small>Humidity · %</small></div>
+            <div><span>💨</span><b id="wind">14</b><small>Wind · km/h</small></div>
+            <div><span>☔</span><b id="probability">78</b><small>Rain chance · %</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-card">
+        <div class="eyebrow">BUILT FOR THE LAST MILE</div>
+        <h2>Simple enough for everyone.<br><span>Useful enough for every decision.</span></h2>
+        <p>Panchayat Weather Connect presents weather information at a local administrative level, creating a foundation for future weather downscaling, alerts and decision-support services.</p>
+        <div class="feature-row">
+          <div><span>01</span><strong>Hyperlocal</strong><small>Panchayat-focused information</small></div>
+          <div><span>02</span><strong>Accessible</strong><small>Clear, simple interface</small></div>
+          <div><span>03</span><strong>Scalable</strong><small>Ready for real data integration</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand footer-brand"><span class="brand-mark">☁</span><span><strong>Panchayat</strong><em>Weather Connect</em></span></div>
+    <p>SIH 2026 Prototype · Weather intelligence for local communities</p>
+    <span class="footer-note">Version 1.0</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
