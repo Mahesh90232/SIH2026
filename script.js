@@ -1,7 +1,7 @@
 const weatherData = {
-  "Panchayat A": { temperature:31.5, rainfall:22, humidity:75, wind:14, probability:78 },
-  "Panchayat B": { temperature:32.4, rainfall:17, humidity:69, wind:12, probability:62 },
-  "Panchayat C": { temperature:31.8, rainfall:25, humidity:79, wind:16, probability:84 }
+  "Panchayat A": { temperature:50, rainfall:22, humidity:75, wind:14, probability:78 },
+  "Panchayat B": { temperature:55, rainfall:17, humidity:69, wind:12, probability:62 },
+  "Panchayat C": { temperature:90, rainfall:25, humidity:79, wind:16, probability:84 }
 };
 
 function showWeather() {
